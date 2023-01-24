@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    <title>Encriptador Alura</title>
+</head>
+<body>
+
+    <header id="nav">
+        <div class="container-btn-mode">
+            <div id="id-btn-mode" class="btn-mode">
+               <img id="id-sun" class="sun" src="icon/Sun2.png" alt="sun" height="25px">
+               <img id="id-moon" class="moon" src="icon/Moon2.png" alt="moon" height="25px">
+            </div>
+         </div>
+        <!--logo alura-->
+        <img id="logo" src="img/Logo.svg" alt="Logo Alura">
+    </header>
+    
+    <main>
+        <!--contenedor de entrada-->
+        <div id="container-in" class="container-input">
+            <!--area de texto-->    
+            <textarea id="text-in" class="text in" type="text" placeholder="Ingrese el texto aquí" autofocus required></textarea>
+
+            <!--Botones de encriptado, desencriptado y borrado-->            
+            <div class="buttoms">
+                <input id="btn-encrypt" class="first btn encrypt" type="button" value="Encriptar" onclick="encryptBtn ()">
+                <input id="btn-decrypt" class="first btn decrypt" type="button" value="Desencriptar" onclick="decryptBtn ()"> 
+                <input id="btn-clean" class="first btn clean" type="button" value="Borrar mensaje" onclick="cleanBtn ()"> 
+                <!--botones para display tipo tablet-->
+                <input id="btn-encrypt2" class="second btn encrypt" type="button" value="Encriptar" onclick="encryptBtn2 ()">
+                <input id="btn-decrypt2" class="second btn decrypt" type="button" value="Desencriptar" onclick="decryptBtn2 ()"> 
+                <input id="btn-clean2" class="second btn clean" type="button" value="Borrar mensaje" onclick="cleanBtn2 ()">
+                
+            </div>          
+        </div>
+        
+        <!--Contenedor de salida-->
+        <div id="container-out" class="container-output">            
+            <!--imagenes de fondo intercambiables-->
+            <img id="muneco" src="img/Muñeco.svg" alt="diseño ilustrativo">
+            <img id="diamond" src="img/diamod.svg" alt="diseño ilustrativo">
+            <!--area de texto-->    
+            <textarea id="text-out" class="text out" type="text" placeholder="Ingresa el texto que deseas encriptar o desencriptar" disabled></textarea>          
+            <!--Boton para copiar-->    
+            <input id="btn-copy" class="btn copy" type="button" value="Copiar"  onclick="copyOnClipBoard ()">
+            
+        </div>
+
+        <script src="js/script.js"></script>
+         
+        <footer id="footer">
+            
+            <p>Creado por Israel Cruz | &copyTodos los derechos reservados</p><br>
+            <div class="links">
+                <a href="https://www.linkedin.com/in/israel-cruz-ba51aa257/" target="_blank"><img src="icon/linkedin.svg" alt="linkedin" height="40px"></a> 
+                <a href="https://github.com/BaphyIsLove" target="_blank"><img src="icon/github.svg" alt="github" height="40px"></a>
+            </div>
+            
+            
+        </footer>
+        
+    </main>
+</body>
+</html>

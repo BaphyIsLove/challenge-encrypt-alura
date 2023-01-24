@@ -1,0 +1,330 @@
+:root{
+    --lightgray: #E5E5E5;
+    --gray: #6f6f6f;
+    --darkgray: #3b3838;
+    --darkblue: #0A3871;
+    --white: #fff;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: var(--lightgray);
+    transition: 2s;
+}
+
+header {
+    position: block;
+    height: 55px;
+}
+
+#logo{
+    position: absolute;
+    top: 5vh;
+    left: 0;
+}
+
+/*botones modo oscuro*/
+.container-btn-mode{
+    position: absolute;
+    top:15px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.btn-mode{
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    border:2px solid var(--darkblue);
+    border-radius: 20px;
+    background-color: var(--darkblue);
+    transition: 2s;
+}
+
+.btn-mode img {
+    margin: auto;
+    padding: 2px;
+}
+
+.moon {
+    display: block;
+}
+
+.sun {
+    display: none;
+}
+
+/*contenido principal*/  
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*entrada de texto*/
+.container-input {
+    width: 50%;
+    height: 550px;
+    display: block;
+}
+  
+.text {
+    display: block;
+    margin: 25px auto; 
+    padding: 5px;
+    border: 0;
+    resize: none;
+}
+  
+.text:focus {
+    outline: none;
+}
+
+.in {
+    width: 90%;
+    height: 400px;
+    background-color: var(--lightgray);
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--darkblue);
+    transition: 2s background-color;
+}
+
+.in:focus {
+    outline: none;
+}
+
+.in::placeholder {
+    color: var(--darkblue);
+    transition: 2s color;
+}
+
+/*salida de texto*/
+.container-output {
+    background-color: var(--white);
+    width: 45%;
+    height: 550px;
+    border-radius: 30px;
+    transition: 2s background-color;
+    display: block;
+}
+
+.out {
+    background-color: var(--white);
+    width: 90%;
+    height: auto;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 2s background-color;
+}
+
+.out::placeholder {
+    text-align: center;
+    font-weight: bold;
+}
+
+#muneco {
+    width: 30vw;
+    height: 40vh;
+    display: block;
+    margin: 15px auto;
+}
+
+#diamond {
+    height: 60px;
+    display: none;
+    margin: 15px auto;
+}
+
+/*Botones*/
+.btn{
+    width: 30%;
+    margin: 5px auto;
+    padding: 10px;
+    border: 3px solid var(--darkblue);
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 2s;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.encrypt, .decrypt{
+    background-color: var(--darkblue);
+    color: var(--lightgray);
+    transition: 2s background-color;
+}
+
+.buttoms {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.copy {
+    display: none;
+}
+
+.second {
+    display: none;
+}
+
+footer {
+    position: static;
+    width: 100%;
+    height: 60px;
+    margin: 10px 0;
+    padding: 15px;
+    background-color: var(--darkblue);
+    text-align: center;
+    transition: 2s background-color;
+}
+
+footer p {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--white);
+    margin: 0 auto;
+    padding: 5px;
+    display: inline-block;
+}
+
+footer .links {
+    margin: 0 auto;
+}
+
+/*ajustes de pantalla*/
+@media only screen and (max-width: 800px) {
+    #logo{
+        height: 40px;
+    }
+
+    .container-input {
+        width: 90%;
+        height: 300px;
+    }
+    
+    .in {
+        width: 90%;
+        height: 150px;
+    }
+
+    .btn{
+        width: auto;
+    }
+
+    /*salida de texto*/
+    .container-output {
+        width: 90%;
+        height: 300px;
+    }
+    
+    .out {
+        width: 90%;
+        height: auto;
+    }
+    
+    #muneco {
+        display: none;
+    }
+    
+    #diamond {
+        display: block;
+    }
+
+    .first{
+        display: none;
+    }
+
+    .second{
+        display: block;
+    }
+
+    .third {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    #logo{
+        height: 35px;
+        top: 5vh;
+    }
+
+    .container-input {
+        width: 90%;
+        height: 380px;
+    }
+
+    .buttoms {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn{
+        width: 70%;
+    }
+
+    footer p {
+        font-size: 10px;
+    }
+}
+
+
+
+
+
+
+/*modo oscuro*/
+.darkmode_body {
+    background: var(--gray);
+    transition: 2s;
+}
+  
+.btn-border {
+    border-color: var(--darkgray);
+    transition: 2s;
+}
+  
+.btn-color {
+    background-color: var(--darkgray);
+    transition: 2s;
+}
+
+.moon-display {
+    display: none;
+}
+
+.sun-display {
+    display: block;  
+}
+
+.in-darkmode {
+    background-color: var(--gray);
+    color: var(--lightgray);
+    transition: 2s;
+}
+
+.in-darkmode::placeholder {
+    color: var(--lightgray);
+    transition: 2s;
+}
+
+.out-darkmode {
+    background-color: var(--darkgray);
+    color: var(--lightgray);
+    transition: 2s;
+}
+
+.out-darkmode::placeholder {
+    color: var(--lightgray);
+    transition: 2s;
+}
+
+.footer-darkmode {
+    background-color: var(--darkgray);
+    transition: 2s;
+}
